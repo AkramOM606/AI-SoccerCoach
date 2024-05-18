@@ -17,6 +17,38 @@ This project is a collaborative effort by:
 - ADRANE Akram
 - BELMOUSSA Abderrazak
 
+# Data set
+
+Our project leverages public data from the StatsBomb API to train and evaluate our AI models. This data provides a rich set of information about soccer matches, including:
+
+## Match Events: The core of our dataset consists of detailed event data for each match. This data includes information like:
+1.Event type (e.g., shot, pass, tackle)
+2.Player involved (if applicable)
+3.Time of the event
+4.Location on the field (x, y coordinates)
+5.Pressure on the player (during the event)
+6.Related events (e.g., a shot might be linked to a block)
+7.Match Structure: Data about the match structure is also available, including:
+8.Competition and season information
+9.Starting lineups and formations for each team
+10.Tactical shifts made throughout the match (if any)
+
+# Data Source:
+
+The data is provided as JSON files exported from the StatsBomb Data API. You can find more details about the data format and event definitions in the StatsBomb documentation: https://statsbomb.com/what-we-do/hub/free-data/
+
+# Specifics of Usage:
+
+We primarily focused on the "events" data for our project. This data provides a granular understanding of player actions and in-game situations, allowing us to train AI models for tasks like:
+
+## Analyzing player performance
+## Identifying tactical patterns
+## Predicting future events
+
+# Data Cleaning and Compression (Decrapify)
+
+
+
 ## Installation and Usage
 
 (Provide instructions on how to install and use your project here.)
