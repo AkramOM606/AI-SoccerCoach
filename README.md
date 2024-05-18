@@ -49,9 +49,9 @@ We primarily focused on the "events" data for our project. This data provides a 
 # Data Optimization: Addressing Size and Token Limits
 The raw dataset size presented challenges due to token limitations. To ensure efficient training, we performed data cleaning and JSON minification to optimize the data without compromising its integrity. This allowed us to effectively train our AI models within the framework's constraints.
 
-Before Data Optimization --> Number of tokens LLama 3 Tokens : 1,684,548
-After Deleting irrelevant data --> Number of tokens LLama 3 Tokens : 1,116,238 (~ 33.7366% decrease)
-After minifying the json and deleting irrelevant data --> Number of tokens LLama 3 Tokens : 756,881 (~ 55.0692% decrease)  
+* Before Data Optimization --> Number of tokens LLama 3 Tokens : 1,684,548
+* After Deleting irrelevant data --> Number of tokens LLama 3 Tokens : 1,116,238 (~ 33.7366% decrease)
+* After minifying the json and deleting irrelevant data --> Number of tokens LLama 3 Tokens : 756,881 (~ 55.0692% decrease)  
 # Installation and Usage
 
 (Provide instructions on how to install and use your project here.)
