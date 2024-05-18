@@ -1,15 +1,15 @@
 # e-SoccerCoach
 
-## Project Overview
+# Project Overview
 
 e-SoccerCoach is an innovative project developed for the ThinkAI hackathon. It harnesses the power of generative AI to assist soccer coaches and enhance crowd attention retention during matches.
 
-## Features
+# Features
 
 1. **AI Soccer Coach Assistant**: Utilizes generative AI to help coaches make informed decisions by providing real-time insights and recommendations.
 2. **Crowd Attention Retention**: Employs AI to analyze and predict crowd behavior, aiming to improve the overall spectator experience.
 
-## Team
+# Team
 
 This project is a collaborative effort by:
 
@@ -46,21 +46,23 @@ We primarily focused on the "events" data for our project. This data provides a 
 ## Predicting future events
 
 # Data Cleaning and Compression (Decrapify)
+# Data Optimization: Addressing Size and Token Limits
+The raw dataset size presented challenges due to token limitations. To ensure efficient training, we performed data cleaning and JSON minification to optimize the data without compromising its integrity. This allowed us to effectively train our AI models within the framework's constraints.
 
 
 
-## Installation and Usage
+# Installation and Usage
 
 (Provide instructions on how to install and use your project here.)
 
-## Contributing
+# Contributing
 
 As this is a hackathon project, we are not currently accepting contributions.
 
-## Acknowledgements
+# Acknowledgements
 
 We would like to express our gratitude to the ThinkAI hackathon organizers for giving us the opportunity to work on this exciting project.
 
-## License
+# License
 
 (Include any license information here.)
