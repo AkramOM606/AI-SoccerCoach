@@ -21,17 +21,17 @@ This project is a collaborative effort by:
 
 Our project leverages public data from the StatsBomb API to train and evaluate our AI models. This data provides a rich set of information about soccer matches, including:
 
-## Match Events: The core of our dataset consists of detailed event data for each match. This data includes information like:
-1.Event type (e.g., shot, pass, tackle)
-2.Player involved (if applicable)
-3.Time of the event
-4.Location on the field (x, y coordinates)
-5.Pressure on the player (during the event)
-6.Related events (e.g., a shot might be linked to a block)
-7.Match Structure: Data about the match structure is also available, including:
-8.Competition and season information
-9.Starting lineups and formations for each team
-10.Tactical shifts made throughout the match (if any)
+> Match Events: The core of our dataset consists of detailed event data for each match. This data includes information like:
+1. Event type (e.g., shot, pass, tackle)
+2. Player involved (if applicable)
+3. Time of the event
+4. Location on the field (x, y coordinates)
+5. Pressure on the player (during the event)
+6. Related events (e.g., a shot might be linked to a block)
+7. Match Structure: Data about the match structure is also available, including:
+8. Competition and season information
+9. Starting lineups and formations for each team
+10. Tactical shifts made throughout the match (if any)
 
 # Data Source:
 
