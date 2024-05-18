@@ -13,9 +13,9 @@ e-SoccerCoach is an innovative project developed for the ThinkAI hackathon. It h
 
 This project is a collaborative effort by:
 
-- Your Name
-- Collaborator1
-- Collaborator2
+- AMZYL Mohammed Ali
+- ADRANE Akram
+- BELMOUSSA Abderrazak
 
 ## Installation and Usage
 
