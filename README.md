@@ -104,4 +104,4 @@ We would like to express our gratitude to the ThinkAI hackathon organizers for g
 
 # License
 
-(Include any license information here.)
+This project is licensed under the MIT License: https://opensource.org/licenses/MIT (see LICENSE.md for details).
