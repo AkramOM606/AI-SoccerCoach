@@ -1,8 +1,8 @@
-# e-SoccerCoach : e-RegragAi 🥑
+# AI-SoccerCoach : e-RegragAi 🥑
 
 # Project Overview
 
-e-SoccerCoach is an innovative project developed for the ThinkAI hackathon. It harnesses the power of generative AI to assist soccer coaches and enhance crowd attention retention during matches.
+AI-SoccerCoach is an innovative project developed for the ThinkAI hackathon. It harnesses the power of generative AI to assist soccer coaches and enhance crowd attention retention during matches.
 
 [e-RegragAi presentation](https://www.canva.com/design/DAGFo7cgB10/a28dFm-hRDvjz97xNuZJnQ/view?utm_content=DAGFo7cgB10&utm_campaign=designshare&utm_medium=link&utm_source=editor)
 # Features
@@ -39,7 +39,7 @@ Our project leverages public data from the StatsBomb API to train and evaluate o
 The data is provided as JSON files exported from the StatsBomb Data API. You can find more details about the data format and event definitions in the StatsBomb documentation: https://statsbomb.com/what-we-do/hub/free-data/
 
 # Specifics of Usage:
-![S C A M P E R](https://github.com/AkramOM606/e-SoccerCoach/assets/114829650/86b54219-c421-47a3-a6b7-1e0f4055e6d7)
+![S C A M P E R](https://github.com/AkramOM606/AI-SoccerCoach/assets/114829650/86b54219-c421-47a3-a6b7-1e0f4055e6d7)
 
 We primarily focused on the "events" data for our project. This data provides a granular understanding of player actions and in-game situations, allowing us to train AI models for tasks like:
 
@@ -62,7 +62,7 @@ We primarily focused on the "events" data for our project. This data provides a 
   
 # Data Cleaning and Compression (Decrapify)
 To optimize the AI assistant coach's performance, we take a two-pronged approach to the game data (JSON format). First, we clean it by removing irrelevant information that wouldn't be helpful for the analysis. Second, we focus on efficiency by minimizing the JSON file size and reducing the number of tokens after tokenization. This makes the data lighter and easier for the AI model to process, ultimately leading to faster analysis and real-time decision support for the coach during the game.
-![CI_CD Diagram](https://github.com/AkramOM606/e-SoccerCoach/assets/114829650/41a45ec9-8d76-46c2-9db4-075c96a0dcde)
+![CI_CD Diagram](https://github.com/AkramOM606/AI-SoccerCoach/assets/114829650/41a45ec9-8d76-46c2-9db4-075c96a0dcde)
 
 # Data Optimization: Addressing Size and Token Limits
 The raw dataset size presented challenges due to token limitations. To ensure efficient training, we performed data cleaning and JSON minification to optimize the data without compromising its integrity. This allowed us to effectively train our AI models within the framework's constraints.
@@ -72,7 +72,7 @@ The raw dataset size presented challenges due to token limitations. To ensure ef
 * After minifying the json and deleting irrelevant data --> Number of tokens LLama 3 Tokens : 756,881 (~ 55.1% decrease)  
 
 # Model Devlopment and benchmarking
-![User Flow Template (2)](https://github.com/AkramOM606/e-SoccerCoach/assets/114829650/08dd1da8-aa17-430e-a76a-9c57b53416f1)
+![User Flow Template (2)](https://github.com/AkramOM606/AI-SoccerCoach/assets/114829650/08dd1da8-aa17-430e-a76a-9c57b53416f1)
 
 The benchmarking metrics are : 
 
@@ -95,7 +95,7 @@ These three benchmarking metrics comprehensively assess the effectiveness of the
 # Demo 
 
 
-https://github.com/AkramOM606/e-SoccerCoach/assets/114829650/063ffe6b-a4d3-4c52-815f-afea876c719b
+https://github.com/AkramOM606/AI-SoccerCoach/assets/114829650/063ffe6b-a4d3-4c52-815f-afea876c719b
 
 
 # Installation and Usage
@@ -104,11 +104,11 @@ https://github.com/AkramOM606/e-SoccerCoach/assets/114829650/063ffe6b-a4d3-4c52-
 This project utilizes the Ollama framework (https://ollama.com/library/llama3:8b-instruct-q6_K) to run our AI coach assistant model locally. Ollama offers a user-friendly interface for deploying and interacting with large language models (LLMs) like ours.
 
 ```
-$ git clone https://github.com/AkramOM606/e-SoccerCoach
+$ git clone https://github.com/AkramOM606/AI-SoccerCoach
 ```
 
 ```
-$ cd e-SoccerCoach
+$ cd AI-SoccerCoach
 ```
 
 ```
