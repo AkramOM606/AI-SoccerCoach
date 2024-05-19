@@ -1,5 +1,4 @@
 import json
-from time import sleep
 import asyncio
 
 
@@ -53,6 +52,7 @@ async def send_chunked_json(
     # After the loop, send any remaining items in the last chunk
     if chunk:
         send_function(json.dumps(chunk))
+
 
 # Function to be called when sending data
 def send_data(data):
