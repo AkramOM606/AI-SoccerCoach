@@ -38,14 +38,31 @@ Our project leverages public data from the StatsBomb API to train and evaluate o
 The data is provided as JSON files exported from the StatsBomb Data API. You can find more details about the data format and event definitions in the StatsBomb documentation: https://statsbomb.com/what-we-do/hub/free-data/
 
 # Specifics of Usage:
+![S C A M P E R](https://github.com/AkramOM606/e-SoccerCoach/assets/114829650/86b54219-c421-47a3-a6b7-1e0f4055e6d7)
 
 We primarily focused on the "events" data for our project. This data provides a granular understanding of player actions and in-game situations, allowing us to train AI models for tasks like:
 
 ## Analyzing player performance
+1. Focus: The analysis will go beyond simply tracking basic stats. The AI will look for deeper insights, such as:
+    - Passing effectiveness: Completion rate, accuracy, and whether passes lead to scoring opportunities.
+    - Positioning: Does a player occupy space effectively to support teammates or disrupt opponents?
+    - Movement: How effectively does a player move on and off the ball to create space and influence the game?
+2. Goal: This analysis isn't just about individual brilliance. The AI aims to understand how each player's performance contributes to the overall team strategy and identify areas for improvement
+   
 ## Identifying tactical patterns
+  * Attacking strategies: Is the team using counter-attacks, possession-based play, or crosses from the flanks?
+  * Defensive formations: Is the team utilizing a zonal marking system, man-marking, or a combination of both?
+  * Exploitable weaknesses: Are there any weaknesses in the opponent's tactics that can be exploited?
+    
 ## Predicting future events
-
+- Counter-tactics: Recommending strategies to neutralize the opponent's tactics.
+- Formational changes: Suggesting adjustments to the team's formation to better exploit the opponent's weaknesses.
+- Player instructions: Providing specific instructions to individual players based on the identified patterns.
+  
 # Data Cleaning and Compression (Decrapify)
+To optimize the AI assistant coach's performance, we take a two-pronged approach to the game data (JSON format). First, we clean it by removing irrelevant information that wouldn't be helpful for the analysis. Second, we focus on efficiency by minimizing the JSON file size and reducing the number of tokens after tokenization. This makes the data lighter and easier for the AI model to process, ultimately leading to faster analysis and real-time decision support for the coach during the game.
+![CI_CD Diagram](https://github.com/AkramOM606/e-SoccerCoach/assets/114829650/41a45ec9-8d76-46c2-9db4-075c96a0dcde)
+
 # Data Optimization: Addressing Size and Token Limits
 The raw dataset size presented challenges due to token limitations. To ensure efficient training, we performed data cleaning and JSON minification to optimize the data without compromising its integrity. This allowed us to effectively train our AI models within the framework's constraints.
 
