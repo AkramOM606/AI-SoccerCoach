@@ -14,43 +14,51 @@ async def send_chunked_json(
         file_path: Path to the JSON file.
         send_function: A function that takes a JSON string as input and sends it.
     """
+    # Open the JSON file and load its content
     with open(file_path, "r") as f:
         data = json.load(f)
 
-    # Sort data by timestamps
+    # Sort the data by timestamps to ensure chronological order
     data.sort(key=lambda x: x["timestamp"])
 
-    start_time = None
-    chunk = []
+    start_time = None  # Variable to store the starting timestamp of each chunk
+    chunk = []  # List to accumulate items for the current chunk
+
     for item in data:
+        # Extract and convert the timestamp to seconds
         timestamp = item["timestamp"]
-        # Convert timestamp string to seconds
         hours, minutes, seconds = timestamp.split(":")
         seconds = int(hours) * 3600 + int(minutes) * 60 + float(seconds)
 
         if start_time is None:
-            # Initialize start time for the first chunk
+            # Initialize the start time for the first chunk
             start_time = seconds
         elif seconds - start_time >= 10:
-            # Send the chunk and reset variables
-            send_function(json.dumps(chunk))
-            await asyncio.sleep(10)
+            # If the current item's timestamp is 10 or more seconds after the start time,
+            # send the current chunk and reset the variables
+            send_function(
+                json.dumps(chunk)
+            )  # Send the chunk using the provided send_function
+            await asyncio.sleep(
+                10
+            )  # Wait for 10 seconds before processing the next chunk
 
-            start_time = seconds
-            chunk = []
+            start_time = (
+                seconds  # Update the start time to the current item's timestamp
+            )
+            chunk = []  # Reset the chunk list for the next set of items
 
-        chunk.append(item)
+        chunk.append(item)  # Add the current item to the chunk
 
-    # Send the last chunk if any
+    # After the loop, send any remaining items in the last chunk
     if chunk:
         send_function(json.dumps(chunk))
 
 
-# Example usage (replace send_data with your actual sending function)
 def send_data(data):
-    # Implement your logic to send data here
     print(f"Sending chunk: {data}")
 
 
+# Define the file path and call the function to start sending data in chunks
 file_path = "transformed_file.json"
 send_chunked_json(file_path, send_data)
