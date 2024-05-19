@@ -100,6 +100,9 @@ https://github.com/AkramOM606/e-SoccerCoach/assets/114829650/063ffe6b-a4d3-4c52-
 
 # Installation and Usage
 
+**Local Model Development with Ollama**
+This project utilizes the Ollama framework (https://ollama.com/library/llama3:8b-instruct-q6_K) to run our AI coach assistant model locally. Ollama offers a user-friendly interface for deploying and interacting with large language models (LLMs) like ours.
+
 ```
 $ git clone https://github.com/AkramOM606/e-SoccerCoach
 ```
