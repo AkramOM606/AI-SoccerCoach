@@ -4,6 +4,7 @@
 
 e-SoccerCoach is an innovative project developed for the ThinkAI hackathon. It harnesses the power of generative AI to assist soccer coaches and enhance crowd attention retention during matches.
 
+[e-RegragAi presentation](https://www.canva.com/design/DAGFo7cgB10/a28dFm-hRDvjz97xNuZJnQ/view?utm_content=DAGFo7cgB10&utm_campaign=designshare&utm_medium=link&utm_source=editor)
 # Features
 
 1. **AI Soccer Coach Assistant**: Utilizes generative AI to help coaches make informed decisions by providing real-time insights and recommendations.
