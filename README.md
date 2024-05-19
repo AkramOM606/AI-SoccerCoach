@@ -69,6 +69,27 @@ The raw dataset size presented challenges due to token limitations. To ensure ef
 * Before Data Optimization --> Number of tokens LLama 3 Tokens : 1,684,548
 * After Deleting irrelevant data --> Number of tokens LLama 3 Tokens : 1,116,238 (~ 33.7366% decrease)
 * After minifying the json and deleting irrelevant data --> Number of tokens LLama 3 Tokens : 756,881 (~ 55.0692% decrease)  
+
+# Model Devlopment and benchmarking
+![User Flow Template (2)](https://github.com/AkramOM606/e-SoccerCoach/assets/114829650/08dd1da8-aa17-430e-a76a-9c57b53416f1)
+
+The benchmarking metrics are : 
+
+1. **Expected Goal (XG) factor**:
+
+This metric assesses how well the AI assistant's insights and suggestions influence the desired outcome of the match. Ideally, the AI should help the coach achieve the team's strategic goal, such as increasing the chances of winning (increasing goals scored, decreasing goals conceded), improving possession, or maximizing player performance. We track whether the AI's suggestions lead to a positive impact on the XG, indicating its effectiveness in achieving the desired outcome.
+
+2. **Expert Validation**:
+
+This metric focuses on the human coach's evaluation of the AI's suggestions. Do experienced coaches agree with the recommended actions? Are the suggested plays and tactics strategically sound and adaptable to the game situation? This validation ensures the AI's suggestions align with human expertise, building trust and potentially leading to adoption by coaches.
+
+3. **LLM as AI Judge (AI-on-AI Evaluation)**:
+This innovative metric introduces a second AI model to evaluate the first AI's (coach assistant) suggestions. This "judge" AI would be trained on a dataset of successful coaching decisions and game outcomes. By analyzing the current game situation, player data, and the coach assistant's suggestions, the judge AI can provide an objective, data-driven assessment of the proposed actions.
+
+**Overall**:
+
+These three benchmarking metrics comprehensively assess the effectiveness of the AI coach assistant. By evaluating its impact on the desired outcome (XG), alignment with expert coaches, and performance against a second AI judge, you can gain a robust understanding of the model's strengths and weaknesses, ultimately leading to a more valuable tool for coaches in the field.
+
 # Installation and Usage
 
 (Provide instructions on how to install and use your project here.)
