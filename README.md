@@ -90,6 +90,13 @@ This innovative metric introduces a second AI model to evaluate the first AI's (
 
 These three benchmarking metrics comprehensively assess the effectiveness of the AI coach assistant. By evaluating its impact on the desired outcome (XG), alignment with expert coaches, and performance against a second AI judge, you can gain a robust understanding of the model's strengths and weaknesses, ultimately leading to a more valuable tool for coaches in the field.
 
+
+# Demo 
+
+
+https://github.com/AkramOM606/e-SoccerCoach/assets/114829650/063ffe6b-a4d3-4c52-815f-afea876c719b
+
+
 # Installation and Usage
 
 (Provide instructions on how to install and use your project here.)
