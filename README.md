@@ -99,8 +99,18 @@ https://github.com/AkramOM606/e-SoccerCoach/assets/114829650/063ffe6b-a4d3-4c52-
 
 # Installation and Usage
 
-(Provide instructions on how to install and use your project here.)
+```
+$ git clone https://github.com/AkramOM606/e-SoccerCoach
+```
 
+```
+$ cd e-SoccerCoach
+```
+
+```
+pip install -r requirements.txt
+
+```
 # Contributing
 
 As this is a hackathon project, we are not currently accepting contributions.
