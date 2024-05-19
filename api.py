@@ -54,7 +54,7 @@ async def send_chunked_json(
     if chunk:
         send_function(json.dumps(chunk))
 
-
+# Function to be called when sending data
 def send_data(data):
     print(f"Sending chunk: {data}")
 
