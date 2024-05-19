@@ -67,8 +67,8 @@ To optimize the AI assistant coach's performance, we take a two-pronged approach
 The raw dataset size presented challenges due to token limitations. To ensure efficient training, we performed data cleaning and JSON minification to optimize the data without compromising its integrity. This allowed us to effectively train our AI models within the framework's constraints.
 
 * Before Data Optimization --> Number of tokens LLama 3 Tokens : 1,684,548
-* After Deleting irrelevant data --> Number of tokens LLama 3 Tokens : 1,116,238 (~ 33.7366% decrease)
-* After minifying the json and deleting irrelevant data --> Number of tokens LLama 3 Tokens : 756,881 (~ 55.0692% decrease)  
+* After Deleting irrelevant data --> Number of tokens LLama 3 Tokens : 1,116,238 (~ 33.7% decrease)
+* After minifying the json and deleting irrelevant data --> Number of tokens LLama 3 Tokens : 756,881 (~ 55.1% decrease)  
 
 # Model Devlopment and benchmarking
 ![User Flow Template (2)](https://github.com/AkramOM606/e-SoccerCoach/assets/114829650/08dd1da8-aa17-430e-a76a-9c57b53416f1)
