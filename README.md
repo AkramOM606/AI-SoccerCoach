@@ -100,7 +100,11 @@ As this is a hackathon project, we are not currently accepting contributions.
 
 # Acknowledgements
 
-We would like to express our gratitude to the ThinkAI hackathon organizers for giving us the opportunity to work on this exciting project.
+We would like to express our deepest appreciation to all those who provided us the possibility to complete this project. A special gratitude we give to the **ThinkAI hackathon organizers**, whose contribution in stimulating suggestions and encouragement, helped us to coordinate our project.
+
+Our thanks and appreciations also go to **UM6P**, **1337AI**, **ADRIA**, **1337 School**, **College of Computing**, and **Math Maroc** in developing the project. Their willingness to give their time so generously has been very much appreciated.
+
+Finally, an honorable mention goes to our colleagues for their understanding and support on us in completion of this project. Our success would not have been possible without the support of each of the individuals and organizations mentioned above.
 
 # License
 
