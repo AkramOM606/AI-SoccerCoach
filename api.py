@@ -1,64 +1,42 @@
 import json
-import asyncio
 
 
-async def send_chunked_json(
-    file_path="transformed_file.json", send_function=lambda x: print(x)
-):
+def get_chunks(file_path="transformed_file.json", interval=60):
     """
-    This function reads a JSON file, splits it into 10-second chunks based on timestamps,
-    and sends each chunk with a 10-second delay using the provided send_function.
-
-    Args:
-        file_path: Path to the JSON file.
-        send_function: A function that takes a JSON string as input and sends it.
+    Load match data from a JSON file and group it into non-overlapping 1-minute chunks (60 seconds).
+    Each chunk contains only the events that occurred within that specific 1-minute interval.
     """
-    # Open the JSON file and load its content
     with open(file_path, "r") as f:
         data = json.load(f)
 
-    # Sort the data by timestamps to ensure chronological order
+    # Sort data by timestamp
     data.sort(key=lambda x: x["timestamp"])
 
-    start_time = None  # Variable to store the starting timestamp of each chunk
-    chunk = []  # List to accumulate items for the current chunk
+    chunks = []
+    current_chunk = []
+    interval_start = None
 
     for item in data:
-        # Extract and convert the timestamp to seconds
         timestamp = item["timestamp"]
-        hours, minutes, seconds = timestamp.split(":")
-        seconds = int(hours) * 3600 + int(minutes) * 60 + float(seconds)
+        hours, minutes, secs = timestamp.split(":")
+        current_seconds = int(hours) * 3600 + int(minutes) * 60 + float(secs)
 
-        if start_time is None:
-            # Initialize the start time for the first chunk
-            start_time = seconds
-        elif seconds - start_time >= 10:
-            # If the current item's timestamp is 10 or more seconds after the start time,
-            # send the current chunk and reset the variables
-            send_function(
-                json.dumps(chunk)
-            )  # Send the chunk using the provided send_function
-            await asyncio.sleep(
-                10
-            )  # Wait for 10 seconds before processing the next chunk
+        if interval_start is None:
+            interval_start = (
+                current_seconds // interval * interval
+            )  # Align to nearest minute boundary
 
-            start_time = (
-                seconds  # Update the start time to the current item's timestamp
-            )
-            chunk = []  # Reset the chunk list for the next set of items
+        # If the event falls into a new 1-minute interval
+        if current_seconds >= interval_start + interval:
+            if current_chunk:  # Save the previous chunk if it has data
+                chunks.append(current_chunk)
+            current_chunk = [item]  # Start a new chunk with the current event
+            interval_start += interval  # Move to the next 1-minute boundary
+        else:
+            current_chunk.append(item)  # Add event to the current chunk
 
-        chunk.append(item)  # Add the current item to the chunk
+    # Append the final chunk if there’s remaining data
+    if current_chunk:
+        chunks.append(current_chunk)
 
-    # After the loop, send any remaining items in the last chunk
-    if chunk:
-        send_function(json.dumps(chunk))
-
-
-# Function to be called when sending data
-def send_data(data):
-    print(f"Sending chunk: {data}")
-
-
-# Define the file path and call the function to start sending data in chunks
-file_path = "transformed_file.json"
-send_chunked_json(file_path, send_data)
+    return chunks

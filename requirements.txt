@@ -1,3 +1,6 @@
 langchain
 streamlit
 openai
+pdfminer.six
+sentence-transformers
+faiss-cpu
