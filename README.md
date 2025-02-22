@@ -115,6 +115,12 @@ $ cd AI-SoccerCoach
 $ pip install -r requirements.txt
 
 ```
+
+```
+$ streamlit run app.py
+
+```
+
 # Contributing
 
 As this is a hackathon project, we are not currently accepting contributions.
