@@ -113,12 +113,10 @@ $ cd AI-SoccerCoach
 
 ```
 $ pip install -r requirements.txt
-
 ```
 
 ```
 $ streamlit run app.py
-
 ```
 
 # Contributing
